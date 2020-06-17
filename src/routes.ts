@@ -8,6 +8,7 @@ import sendMail from './controllers/sendMail';
 
 const routes = Router();
 routes.get('/', async (req, res) => {
+   
     const resWelcome = welcome();
     res.send(resWelcome)
 })
@@ -17,6 +18,7 @@ routes.post('/sendMail', async (req, res) => {
     const resSendMail = await sendMail(transporter, sender);
     res.status(resSendMail.appStatusCode).send(resSendMail)
 })
+
 
 
 export default routes;
