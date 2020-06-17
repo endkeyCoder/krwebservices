@@ -20,7 +20,7 @@
   "scripts": {
     "tsc": "tsc",
     "dev": "node --inspect=5858 -r ts-node/register ./src/index.ts",
-    "start:watch": "nodemon",
+    "start:watch": "nodemon src/index.js",
     "build": "tsc"
   }
 }
